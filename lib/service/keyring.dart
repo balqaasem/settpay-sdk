@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
-import 'package:polkawallet_sdk/api/apiKeyring.dart';
-import 'package:polkawallet_sdk/service/index.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
+import 'package:settpay_sdk/api/apiKeyring.dart';
+import 'package:settpay_sdk/service/index.dart';
+import 'package:settpay_sdk/storage/keyring.dart';
 
 class ServiceKeyring {
   ServiceKeyring(this.serviceRoot);

@@ -5,10 +5,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 import 'package:jaguar/jaguar.dart';
-import 'package:polkawallet_sdk/api/types/networkParams.dart';
-import 'package:polkawallet_sdk/service/jaguar_flutter_asset.dart';
-import 'package:polkawallet_sdk/service/keyring.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
+import 'package:settpay_sdk/api/types/networkParams.dart';
+import 'package:settpay_sdk/service/jaguar_flutter_asset.dart';
+import 'package:settpay_sdk/service/keyring.dart';
+import 'package:settpay_sdk/storage/keyring.dart';
 
 class WebViewRunner {
   FlutterWebviewPlugin _web;
@@ -45,7 +45,7 @@ class WebViewRunner {
         print('webview loaded');
         final js = jsCode ??
             await rootBundle
-                .loadString('packages/polkawallet_sdk/js_api/dist/main.js');
+                .loadString('packages/settpay_sdk/js_api/dist/main.js');
 
         print('js file loaded');
         await _startJSCode(js, keyring, keyringStorage);
@@ -92,9 +92,9 @@ class WebViewRunner {
 
   Future<void> _startLocalServer() async {
     final cert = await rootBundle
-        .load("packages/polkawallet_sdk/lib/ssl/certificate.pem");
+        .load("packages/settpay_sdk/lib/ssl/certificate.pem");
     final keys =
-        await rootBundle.load("packages/polkawallet_sdk/lib/ssl/keys.pem");
+        await rootBundle.load("packages/settpay_sdk/lib/ssl/keys.pem");
     final security = new SecurityContext()
       ..useCertificateChainBytes(cert.buffer.asInt8List())
       ..usePrivateKeyBytes(keys.buffer.asInt8List());

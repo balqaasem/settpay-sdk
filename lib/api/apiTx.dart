@@ -1,13 +1,13 @@
 import 'dart:convert';
 
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/txInfoData.dart';
-import 'package:polkawallet_sdk/service/tx.dart';
+import 'package:settpay_sdk/api/api.dart';
+import 'package:settpay_sdk/api/types/txInfoData.dart';
+import 'package:settpay_sdk/service/tx.dart';
 
 class ApiTx {
   ApiTx(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final SettPayApi apiRoot;
   final ServiceTx service;
 
   /// Estimate tx fees, [params] will be ignored if we have [rawParam].

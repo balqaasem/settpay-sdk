@@ -1,12 +1,12 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/staking/accountBondedInfo.dart';
-import 'package:polkawallet_sdk/api/types/staking/ownStashInfo.dart';
-import 'package:polkawallet_sdk/service/staking.dart';
+import 'package:settpay_sdk/api/api.dart';
+import 'package:settpay_sdk/api/types/staking/accountBondedInfo.dart';
+import 'package:settpay_sdk/api/types/staking/ownStashInfo.dart';
+import 'package:settpay_sdk/service/staking.dart';
 
 class ApiStaking {
   ApiStaking(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final SettPayApi apiRoot;
   final ServiceStaking service;
 
   Future<Map> queryElectedInfo() async {

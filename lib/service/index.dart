@@ -1,19 +1,19 @@
 import 'dart:async';
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/service/account.dart';
-import 'package:polkawallet_sdk/service/gov.dart';
-import 'package:polkawallet_sdk/service/keyring.dart';
-import 'package:polkawallet_sdk/service/recovery.dart';
-import 'package:polkawallet_sdk/service/setting.dart';
-import 'package:polkawallet_sdk/service/staking.dart';
-import 'package:polkawallet_sdk/service/tx.dart';
-import 'package:polkawallet_sdk/service/uos.dart';
-import 'package:polkawallet_sdk/service/walletConnect.dart';
-import 'package:polkawallet_sdk/service/webViewRunner.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
+import 'package:settpay_sdk/api/api.dart';
+import 'package:settpay_sdk/service/account.dart';
+import 'package:settpay_sdk/service/gov.dart';
+import 'package:settpay_sdk/service/keyring.dart';
+import 'package:settpay_sdk/service/recovery.dart';
+import 'package:settpay_sdk/service/setting.dart';
+import 'package:settpay_sdk/service/staking.dart';
+import 'package:settpay_sdk/service/tx.dart';
+import 'package:settpay_sdk/service/uos.dart';
+import 'package:settpay_sdk/service/walletConnect.dart';
+import 'package:settpay_sdk/service/webViewRunner.dart';
+import 'package:settpay_sdk/storage/keyring.dart';
 
 /// The service calling JavaScript API of `polkadot-js/api` directly
-/// through [WebViewRunner], providing APIs for [PolkawalletApi].
+/// through [WebViewRunner], providing APIs for [SettPayApi].
 class SubstrateService {
   ServiceKeyring keyring;
   ServiceSetting setting;

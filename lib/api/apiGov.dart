@@ -1,15 +1,15 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/gov/genExternalLinksParams.dart';
-import 'package:polkawallet_sdk/api/types/gov/proposalInfoData.dart';
-import 'package:polkawallet_sdk/api/types/gov/referendumInfoData.dart';
-import 'package:polkawallet_sdk/api/types/gov/treasuryOverviewData.dart';
-import 'package:polkawallet_sdk/api/types/gov/treasuryTipData.dart';
-import 'package:polkawallet_sdk/service/gov.dart';
+import 'package:settpay_sdk/api/api.dart';
+import 'package:settpay_sdk/api/types/gov/genExternalLinksParams.dart';
+import 'package:settpay_sdk/api/types/gov/proposalInfoData.dart';
+import 'package:settpay_sdk/api/types/gov/referendumInfoData.dart';
+import 'package:settpay_sdk/api/types/gov/treasuryOverviewData.dart';
+import 'package:settpay_sdk/api/types/gov/treasuryTipData.dart';
+import 'package:settpay_sdk/service/gov.dart';
 
 class ApiGov {
   ApiGov(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final SettPayApi apiRoot;
   final ServiceGov service;
 
   Future<List> getDemocracyUnlocks(String address) async {

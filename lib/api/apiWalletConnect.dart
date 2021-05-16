@@ -1,12 +1,12 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/walletConnect/pairingData.dart';
-import 'package:polkawallet_sdk/api/types/walletConnect/payloadData.dart';
-import 'package:polkawallet_sdk/service/walletConnect.dart';
+import 'package:settpay_sdk/api/api.dart';
+import 'package:settpay_sdk/api/types/walletConnect/pairingData.dart';
+import 'package:settpay_sdk/api/types/walletConnect/payloadData.dart';
+import 'package:settpay_sdk/service/walletConnect.dart';
 
 class ApiWalletConnect {
   ApiWalletConnect(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final SettPayApi apiRoot;
   final ServiceWalletConnect service;
 
   void initClient(

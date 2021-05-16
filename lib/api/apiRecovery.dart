@@ -1,11 +1,11 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/recoveryInfo.dart';
-import 'package:polkawallet_sdk/service/recovery.dart';
+import 'package:settpay_sdk/api/api.dart';
+import 'package:settpay_sdk/api/types/recoveryInfo.dart';
+import 'package:settpay_sdk/service/recovery.dart';
 
 class ApiRecovery {
   ApiRecovery(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final SettPayApi apiRoot;
   final ServiceRecovery service;
 
   Future<RecoveryInfo> queryRecoverable(String address) async {

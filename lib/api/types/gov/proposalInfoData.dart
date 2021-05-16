@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:polkawallet_sdk/api/types/gov/treasuryOverviewData.dart';
+import 'package:settpay_sdk/api/types/gov/treasuryOverviewData.dart';
 
 part 'proposalInfoData.g.dart';
 

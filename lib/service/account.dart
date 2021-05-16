@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:polkawallet_sdk/service/index.dart';
+import 'package:settpay_sdk/service/index.dart';
 
 class ServiceAccount {
   ServiceAccount(this.serviceRoot);

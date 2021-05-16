@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/txInfoData.dart';
-import 'package:polkawallet_sdk/service/uos.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
+import 'package:settpay_sdk/api/api.dart';
+import 'package:settpay_sdk/api/types/txInfoData.dart';
+import 'package:settpay_sdk/service/uos.dart';
+import 'package:settpay_sdk/storage/keyring.dart';
 
 /// Steps to complete offline-signature as a cold-wallet:
 /// 1. parseQrCode: parse raw data of QR code, and get signer address from it.
@@ -14,7 +14,7 @@ import 'package:polkawallet_sdk/storage/keyring.dart';
 class ApiUOS {
   ApiUOS(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final SettPayApi apiRoot;
   final ServiceUOS service;
 
   /// parse data of QR code.

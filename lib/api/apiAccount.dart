@@ -1,11 +1,11 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/balanceData.dart';
-import 'package:polkawallet_sdk/service/account.dart';
+import 'package:settpay_sdk/api/api.dart';
+import 'package:settpay_sdk/api/types/balanceData.dart';
+import 'package:settpay_sdk/service/account.dart';
 
 class ApiAccount {
   ApiAccount(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final SettPayApi apiRoot;
   final ServiceAccount service;
 
   /// encode addresses to publicKeys

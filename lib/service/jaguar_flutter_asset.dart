@@ -23,7 +23,7 @@ Route serveFlutterAssets(
     String lookupPath =
         segs.join('/') + (ctx.path.endsWith('/') ? 'index.html' : '');
     final body = (await rootBundle
-            .load('packages/polkawallet_sdk/assets/$prefix$lookupPath'))
+            .load('packages/settpay_sdk/assets/$prefix$lookupPath'))
         .buffer
         .asUint8List();
 

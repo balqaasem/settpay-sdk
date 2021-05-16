@@ -1,11 +1,11 @@
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/networkStateData.dart';
-import 'package:polkawallet_sdk/service/setting.dart';
+import 'package:settpay_sdk/api/api.dart';
+import 'package:settpay_sdk/api/types/networkStateData.dart';
+import 'package:settpay_sdk/service/setting.dart';
 
 class ApiSetting {
   ApiSetting(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final SettPayApi apiRoot;
   final ServiceSetting service;
 
   final _msgChannel = "BestNumber";

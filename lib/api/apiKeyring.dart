@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
-import 'package:polkawallet_sdk/api/api.dart';
-import 'package:polkawallet_sdk/api/types/verifyResult.dart';
-import 'package:polkawallet_sdk/service/keyring.dart';
-import 'package:polkawallet_sdk/storage/keyring.dart';
-import 'package:polkawallet_sdk/storage/types/keyPairData.dart';
-import 'package:polkawallet_sdk/webviewWithExtension/types/signExtrinsicParam.dart';
+import 'package:settpay_sdk/api/api.dart';
+import 'package:settpay_sdk/api/types/verifyResult.dart';
+import 'package:settpay_sdk/service/keyring.dart';
+import 'package:settpay_sdk/storage/keyring.dart';
+import 'package:settpay_sdk/storage/types/keyPairData.dart';
+import 'package:settpay_sdk/webviewWithExtension/types/signExtrinsicParam.dart';
 
 enum KeyType { mnemonic, rawSeed, keystore }
 enum CryptoType { sr25519, ed25519 }
@@ -15,7 +15,7 @@ enum CryptoType { sr25519, ed25519 }
 class ApiKeyring {
   ApiKeyring(this.apiRoot, this.service);
 
-  final PolkawalletApi apiRoot;
+  final SettPayApi apiRoot;
   final ServiceKeyring service;
 
   /// Generate a set of new mnemonic.
