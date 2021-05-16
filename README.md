@@ -92,3 +92,44 @@ const node_list = [
     return node_list.map((e) => NetworkParams.fromJson(e)).toList();
   }
 ```
+
+#### 3.4. override `SettPayPlugin.getNavItems(BuildContext, Keyring)`
+Define your custom navigation-item in `BottomNavigationBar` of SettPay App.
+The `HomeNavItem.content` is the page content widget displayed while your navItem was selected.
+```dart
+  @override
+  List<HomeNavItem> getNavItems(BuildContext context, Keyring keyring) {
+    return [
+      HomeNavItem(
+        text: 'Polkadot',
+        icon: SvgPicture.asset(
+          'packages/sp_polkadot/assets/images/logo.svg',
+          color: Theme.of(context).disabledColor,
+        ),
+        iconActive: SvgPicture.asset(
+            'packages/sp_polkadot/assets/images/logo.svg'),
+        content: PolkadotEntry(this, keyring),
+      )
+    ];
+  }
+```
+
+#### 3.5. override `SettPayPlugin.getRoutes(Keyring)`
+Define navigation route for your plugin pages.
+```dart
+  @override
+  Map<String, WidgetBuilder> getRoutes(Keyring keyring) {
+    return {
+      TxConfirmPage.route: (_) =>
+          TxConfirmPage(this, keyring, _service.getPassword),
+      CurrencySelectPage.route: (_) => CurrencySelectPage(this),
+      AccountQrCodePage.route: (_) => AccountQrCodePage(this, keyring),
+
+      TokenDetailPage.route: (_) => TokenDetailPage(this, keyring),
+      TransferPage.route: (_) => TransferPage(this, keyring),
+
+      // other pages
+      // ...
+    };
+  }
+```
