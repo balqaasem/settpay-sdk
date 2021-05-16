@@ -61,3 +61,34 @@ class PluginPolkadot extends SettPayPlugin {
     isTestNet: false,
   );
 ```
+
+#### 3.2. override `SettPayPlugin.tokenIcons`
+Define the icon widgets so the SettPay App can display tokens
+of your para-chain with token icons.
+```dart
+  @override
+  final Map<String, Widget> tokenIcons = {
+    'KSM': Image.asset(
+        'packages/sp_polkadot/assets/images/tokens/KSM.png'),
+    'DOT': Image.asset(
+        'packages/sp_polkadot/assets/images/tokens/DOT.png'),
+  };
+```
+
+#### 3.3. override `SettPayPlugin.nodeList`
+
+```dart
+const node_list = [
+  {
+    'name': 'Kusama (Polkadot Canary, hosted by Parity)',
+    'ss58': 2,
+    'endpoint': 'wss://kusama-rpc.polkadot.io',
+  },
+];
+```
+```dart
+  @override
+  List<NetworkParams> get nodeList {
+    return node_list.map((e) => NetworkParams.fromJson(e)).toList();
+  }
+```
