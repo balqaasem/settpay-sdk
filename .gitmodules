@@ -1,3 +1,6 @@
 [submodule "sp_extension"]
 	path = sp_extension
 	url = https://github.com/setheum-js/sp-extension.js.git
+[submodule "settpay_js"]
+	path = settpay_js
+	url = https://github.com/setheum-js/settpay.js
