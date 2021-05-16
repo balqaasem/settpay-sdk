@@ -42,7 +42,7 @@ flutter:
      - lib/ssl/keys.pem
      - lib/ssl/keys_public.pem
      - assets/index.html
-     - settpay_js/dist/main.js
+     - settpay_api/dist/main.js
      - sp_extension/dist/main.js
   #   - images/a_dot_ham.jpeg
   #

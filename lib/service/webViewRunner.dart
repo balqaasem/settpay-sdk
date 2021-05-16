@@ -45,7 +45,7 @@ class WebViewRunner {
         print('webview loaded');
         final js = jsCode ??
             await rootBundle
-                .loadString('packages/settpay_sdk/js_api/dist/main.js');
+                .loadString('packages/settpay_sdk/settpay_api/dist/main.js');
 
         print('js file loaded');
         await _startJSCode(js, keyring, keyringStorage);
@@ -91,10 +91,9 @@ class WebViewRunner {
   }
 
   Future<void> _startLocalServer() async {
-    final cert = await rootBundle
-        .load("packages/settpay_sdk/lib/ssl/certificate.pem");
-    final keys =
-        await rootBundle.load("packages/settpay_sdk/lib/ssl/keys.pem");
+    final cert =
+        await rootBundle.load("packages/settpay_sdk/lib/ssl/certificate.pem");
+    final keys = await rootBundle.load("packages/settpay_sdk/lib/ssl/keys.pem");
     final security = new SecurityContext()
       ..useCertificateChainBytes(cert.buffer.asInt8List())
       ..usePrivateKeyBytes(keys.buffer.asInt8List());

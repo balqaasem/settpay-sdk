@@ -90,7 +90,7 @@ class _WebViewWithExtensionState extends State<WebViewWithExtension> {
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       rootBundle
-          .loadString('packages/settpay_sdk/js_as_extension/dist/main.js')
+          .loadString('packages/settpay_sdk/sp_extension/dist/main.js')
           .then((String js) {
         setState(() {
           _jsCode = js;
