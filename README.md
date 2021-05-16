@@ -148,5 +148,46 @@ Load the `polkadot-js/api` wrapper you built in step 2.
  - onAccountChanged(), user just changed account, you may clear
  cache of the prev account and query data for new account.
 
-// TODO: Add Example: Examples:
+// TODO: Add Example (Examples):
 //  - [sp_polkadot](https://github.com/SettPay/sp_polkadot/blob/master/lib////sp_polkadot.dart)
+
+## 4. Fetch data and build pages
+
+We use [https://pub.dev/packages/mobx](https://pub.dev/packages/mobx) as the App state management tool.
+ So the directories in a plugin looks like this:
+
+```
+__ lib
+    |__ pages (the UI)
+    |__ store (the MobX store)
+    |__ service (the Actions fired by UI to mutate the store)
+    |__ ...
+```
+To query data through `SettPayPlugin.sdk.api`:
+
+(`settpay/sp_polkadot/lib/service/gov.dart`)
+```dart
+  Future<List> queryReferendums() async {
+    final data = await api.gov.queryReferendums(keyring.current.address);
+    store.gov.setReferendums(data);
+    return data;
+  }
+```
+To query data by calling JS directly:
+
+(`settpay/sp_polkadot/lib/service/gov.dart`)
+```dart
+  Future<void> updateBestNumber() async {
+    final int bestNumber = await api.service.webView
+        .evalJavascript('api.derive.chain.bestNumber()');
+    store.gov.setBestNumber(bestNumber);
+  }
+```
+
+While we set data to MobX store, the MobX Observer Flutter Widget will rebuild with new data.
+
+## 5. Run your pages in `example/` app
+You may want to run an example app in dev while building your plugin pages.
+
+// TODO: Add Example (Examples):
+//  - [sp_polkadot](https://github.com/SettPay/sp_polkadot)

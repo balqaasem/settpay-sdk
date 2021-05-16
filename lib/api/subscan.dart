@@ -38,10 +38,8 @@ class SubScanRequestParams {
   String module;
   String call;
 }
-const post_headers = {
-"Content-type": "application/json",
-"Accept": "*/*"
-};
+
+const post_headers = {"Content-type": "application/json", "Accept": "*/*"};
 
 /// Querying txs from [subscan.io](https://subscan.io).
 class SubScanApi {
@@ -65,7 +63,7 @@ class SubScanApi {
   Future<Map> fetchTransfersAsync(
     String address,
     int page, {
-    String network = 'kusama',
+    String network = 'polkadot',
   }) async {
     Completer completer = new Completer<Map>();
 
@@ -93,7 +91,7 @@ class SubScanApi {
     int page = 0,
     int size = tx_list_page_size,
     String sender,
-    String network = 'kusama',
+    String network = 'polkadot',
   }) async {
     Completer completer = new Completer<Map>();
 
@@ -121,7 +119,7 @@ class SubScanApi {
     int page = 0,
     int size = tx_list_page_size,
     String sender,
-    String network = 'kusama',
+    String network = 'polkadot',
   }) async {
     Completer completer = new Completer<Map>();
 

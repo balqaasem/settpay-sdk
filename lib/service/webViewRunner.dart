@@ -65,7 +65,7 @@ class WebViewRunner {
       clearCache: true,
       javascriptChannels: [
         JavascriptChannel(
-            name: 'PolkaWallet',
+            name: 'SettPay',
             onMessageReceived: (JavascriptMessage message) {
               print('received msg: ${message.message}');
               compute(jsonDecode, message.message).then((msg) {
@@ -145,9 +145,9 @@ class WebViewRunner {
     _msgCompleters[method] = c;
 
     String script = '$code.then(function(res) {'
-        '  PolkaWallet.postMessage(JSON.stringify({ path: "$method", data: res }));'
+        '  SettPay.postMessage(JSON.stringify({ path: "$method", data: res }));'
         '}).catch(function(err) {'
-        '  PolkaWallet.postMessage(JSON.stringify({ path: "log", data: err.message }));'
+        '  SettPay.postMessage(JSON.stringify({ path: "log", data: err.message }));'
         '})';
     _web.evalJavascript(script);
 

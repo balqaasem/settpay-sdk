@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-/// Define the widget used in polkawallet app home page.
+/// Define the widget used in settpay app home page.
 class HomeNavItem {
   HomeNavItem({
     @required this.text,

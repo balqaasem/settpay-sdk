@@ -148,7 +148,7 @@ abstract class SettPayPlugin implements SettPayPluginBase {
 
 abstract class SettPayPluginBase {
   /// A plugin's basic info, including: name, primaryColor and icons.
-  final basic = PluginBasicData(name: 'kusama', primaryColor: Colors.black);
+  final basic = PluginBasicData(name: 'polkadot', primaryColor: Colors.black);
 
   /// Plugin should define a list of node to connect
   /// for users of SettPay App.
@@ -159,7 +159,7 @@ abstract class SettPayPluginBase {
   final Map<String, Widget> tokenIcons = {};
 
   /// The [getNavItems] method returns a list of [HomeNavItem] which defines
-  /// the [Widget] to be used in home page of polkawallet App.
+  /// the [Widget] to be used in home page of settpay App.
   List<HomeNavItem> getNavItems(BuildContext context, Keyring keyring) =>
       List<HomeNavItem>();
 

@@ -21,7 +21,7 @@ import 'package:settpay_sdk/storage/keyring.dart';
 /// * [ApiAccount], for querying on-chain data of accounts, like balances or indices.
 /// * [ApiTx], sign and send tx.
 /// * [ApiStaking] and [ApiGov], the staking and governance module of substrate.
-/// * [ApiUOS], provides the offline-signature ability of polkawallet.
+/// * [ApiUOS], provides the offline-signature ability of settpay.
 /// * [ApiRecovery], the social-recovery module of Kusama network.
 class SettPayApi {
   SettPayApi(this.service);
