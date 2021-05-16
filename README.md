@@ -1,2 +1,3 @@
-# settpay-sdk
-SettPay SDK
+# SP-SDK (SettPaySDK)
+
+SettPay Plugin SDK
