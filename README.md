@@ -133,3 +133,20 @@ Define navigation route for your plugin pages.
     };
   }
 ```
+
+#### 3.6. override `SettPayPlugin.loadJSCode()` method
+Load the `polkadot-js/api` wrapper you built in step 2.
+```dart
+  @override
+  Future<String> loadJSCode() => rootBundle.loadString(
+      'packages/sp_polkadot/lib/js_service_polkadot/dist/main.js');
+```
+
+#### 3.7. override plugin life-circle methods
+ - onWillStart(), you may want to prepare your plugin state data here.
+ - onStarted(), remote node connected, you may fetch data from network.
+ - onAccountChanged(), user just changed account, you may clear
+ cache of the prev account and query data for new account.
+
+// TODO: Add Example: Examples:
+//  - [sp_polkadot](https://github.com/SettPay/sp_polkadot/blob/master/lib////sp_polkadot.dart)
