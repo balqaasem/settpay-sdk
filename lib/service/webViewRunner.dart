@@ -45,7 +45,7 @@ class WebViewRunner {
         print('webview loaded');
         final js = jsCode ??
             await rootBundle
-                .loadString('packages/settpay_sdk/js_api/dist/main.js');
+                .loadString('packages/settpay_sdk/settpay_api/dist/main.js');
 
         print('js file loaded');
         await _startJSCode(js, keyring, keyringStorage);
@@ -65,7 +65,7 @@ class WebViewRunner {
       clearCache: true,
       javascriptChannels: [
         JavascriptChannel(
-            name: 'PolkaWallet',
+            name: 'SettPay',
             onMessageReceived: (JavascriptMessage message) {
               print('received msg: ${message.message}');
               compute(jsonDecode, message.message).then((msg) {
@@ -91,10 +91,9 @@ class WebViewRunner {
   }
 
   Future<void> _startLocalServer() async {
-    final cert = await rootBundle
-        .load("packages/settpay_sdk/lib/ssl/certificate.pem");
-    final keys =
-        await rootBundle.load("packages/settpay_sdk/lib/ssl/keys.pem");
+    final cert =
+        await rootBundle.load("packages/settpay_sdk/lib/ssl/certificate.pem");
+    final keys = await rootBundle.load("packages/settpay_sdk/lib/ssl/keys.pem");
     final security = new SecurityContext()
       ..useCertificateChainBytes(cert.buffer.asInt8List())
       ..usePrivateKeyBytes(keys.buffer.asInt8List());
@@ -146,9 +145,9 @@ class WebViewRunner {
     _msgCompleters[method] = c;
 
     String script = '$code.then(function(res) {'
-        '  PolkaWallet.postMessage(JSON.stringify({ path: "$method", data: res }));'
+        '  SettPay.postMessage(JSON.stringify({ path: "$method", data: res }));'
         '}).catch(function(err) {'
-        '  PolkaWallet.postMessage(JSON.stringify({ path: "log", data: err.message }));'
+        '  SettPay.postMessage(JSON.stringify({ path: "log", data: err.message }));'
         '})';
     _web.evalJavascript(script);
 
