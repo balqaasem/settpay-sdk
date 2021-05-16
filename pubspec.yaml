@@ -43,7 +43,7 @@ flutter:
      - lib/ssl/keys_public.pem
      - assets/index.html
      - settpay_api/dist/main.js
-     - sp_extension/dist/main.js
+     - sp_ext/dist/main.js
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
