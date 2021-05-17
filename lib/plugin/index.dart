@@ -152,7 +152,7 @@ abstract class SettPayPluginBase {
 
   /// Plugin should define a list of node to connect
   /// for users of SettPay App.
-  List<NetworkParams> get nodeList => List<NetworkParams>();
+  List<NetworkParams> get nodeList => [];
 
   /// Plugin should provide [tokenIcons]
   /// for display in Assets page of SettPay App.
@@ -160,8 +160,7 @@ abstract class SettPayPluginBase {
 
   /// The [getNavItems] method returns a list of [HomeNavItem] which defines
   /// the [Widget] to be used in home page of settpay App.
-  List<HomeNavItem> getNavItems(BuildContext context, Keyring keyring) =>
-      List<HomeNavItem>();
+  List<HomeNavItem> getNavItems(BuildContext context, Keyring keyring) => [];
 
   /// App will add plugin's pages with custom [routes].
   Map<String, WidgetBuilder> getRoutes(Keyring keyring) =>
