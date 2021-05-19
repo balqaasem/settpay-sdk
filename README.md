@@ -191,3 +191,7 @@ You may want to run an example app in dev while building your plugin pages.
 
 // TODO: Add Example (Examples):
 //  - [sp_polkadot](https://github.com/SettPay/sp_polkadot)
+
+
+# Updating Submodule
+`git submodule update --remote` updates the submodules from remote origin.
