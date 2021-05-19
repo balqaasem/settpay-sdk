@@ -1,6 +1,6 @@
 name: settpay_sdk
 description: Flutter SDK for building SettPay Plugins (SPs).
-version: 1.0.2
+version: 1.0.3
 homepage: https://www.setheum.xyz
 
 environment:

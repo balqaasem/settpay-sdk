@@ -11,10 +11,14 @@
 
 - Bump settpay_api to polkadot-js/api v4.10.1
 
-## 1.0.1 - 2021-05-16
+## 1.0.2 - 2021-05-19
 
 - Bump to settpay_sdk v1.0.2
 
 - Rename `settpay_extension` from `sp_ext`.
 
 - Bug fixes
+
+## 1.0.3 - 2021-05-20
+
+- Bug fixes - ADD `ALLaCCOUNTS` TO API KEYRING
