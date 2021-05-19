@@ -1,6 +1,6 @@
 name: settpay_sdk
 description: Flutter SDK for building SettPay Plugins (SPs).
-version: 1.0.0
+version: 1.0.3
 homepage: https://www.setheum.xyz
 
 environment:
@@ -40,9 +40,10 @@ flutter:
    assets:
      - lib/ssl/certificate.pem
      - lib/ssl/keys.pem
+     - lib/ssl/keys_public.pem
      - assets/index.html
-     - settpay_js/dist/main.js
-     - sp_extension/dist/main.js
+     - settpay_api/dist/main.js
+     - settpay_extension/dist/main.js
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
